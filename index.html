@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>白鲸自习室 · 经营分析</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(135deg,#e8f0fe,#f5f7fa);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.container{max-width:520px;width:100%}
+h1{font-size:24px;color:#1a73e8;text-align:center;margin-bottom:8px}
+.sub{text-align:center;color:#888;font-size:14px;margin-bottom:28px}
+.cards{display:flex;flex-direction:column;gap:14px}
+.card{background:#fff;border-radius:12px;padding:20px 24px;box-shadow:0 2px 8px rgba(0,0,0,.06);display:flex;align-items:center;gap:16px;transition:transform .15s,box-shadow .15s;text-decoration:none;color:inherit}
+.card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.1)}
+.card .icon{font-size:32px;flex-shrink:0;width:48px;text-align:center}
+.card .body{flex:1}
+.card .title{font-size:17px;font-weight:600;color:#222;margin-bottom:4px}
+.card .desc{font-size:13px;color:#888;line-height:1.5}
+.card .arrow{font-size:18px;color:#ccc;flex-shrink:0}
+.footer{text-align:center;color:#bbb;font-size:12px;margin-top:28px}
+/* 密码锁 */
+#lock{display:flex;flex-direction:column;align-items:center}
+#lock .shield{font-size:48px;margin-bottom:12px}
+#lock input{border:1px solid #ccc;border-radius:8px;padding:10px 16px;font-size:16px;width:220px;text-align:center;outline:none;transition:border .2s}
+#lock input:focus{border-color:#1a73e8}
+#lock button{margin-top:12px;background:#1a73e8;color:#fff;border:none;padding:10px 32px;border-radius:8px;font-size:15px;cursor:pointer;transition:background .2s}
+#lock button:hover{background:#1557b0}
+#lock .err{color:#db4437;font-size:13px;margin-top:8px;display:none}
+#content{display:none}
+</style>
+</head>
+<body>
+<div class="container" id="content">
+<h1>🐋 白鲸自习室（双榆树店）</h1>
+<div class="sub">经营分析报告 · 每日自动更新</div>
+<div class="cards">
+<a href="经营分析日报.html" class="card">
+<div class="icon">📊</div>
+<div class="body"><div class="title">经营分析日报</div><div class="desc">昨日到店 / 新老用户 / 来源分析 / 会员数据 / 预警 & 营销清单</div></div>
+<div class="arrow">›</div>
+</a>
+<a href="会员画像.html" class="card">
+<div class="icon">👥</div>
+<div class="body"><div class="title">会员画像</div><div class="desc">客户人群分析 / 高价值会员 / 复购 & 沉睡 / 区域分布</div></div>
+<div class="arrow">›</div>
+</a>
+<a href="会员生命周期分析.html" class="card">
+<div class="icon">🔄</div>
+<div class="body"><div class="title">会员生命周期</div><div class="desc">体验→会员转化 / 首购→到店时间差 / 卡类迁移 / 流失预警</div></div>
+<div class="arrow">›</div>
+</a>
+</div>
+<div class="footer">报告由经营分析流水线每日自动生成 · 数据来源：白鲸后台 + 飞书</div>
+</div>
+<div class="container" id="lock">
+<div class="shield">🔒</div>
+<h1 style="margin-bottom:4px">白鲸自习室 · 经营分析</h1>
+<div class="sub" style="margin-bottom:16px">请输入访问密码</div>
+<input type="password" id="pwd" placeholder="输入密码" autofocus onkeydown="if(event.key==='Enter')verify()">
+<button onclick="verify()">进入</button>
+<div class="err" id="err">密码错误，请重试</div>
+</div>
+<script>
+async function verify(){
+  const input=document.getElementById('pwd').value;
+  if(!input.trim())return;
+  const encoder=new TextEncoder();
+  const data=encoder.encode(input.trim());
+  const hashBuffer=await crypto.subtle.digest('SHA-256',data);
+  const hashArray=Array.from(new Uint8Array(hashBuffer));
+  const hashHex=hashArray.map(b=>b.toString(16).padStart(2,'0')).join('');
+  if(hashHex==='4dc91d0bac5e46b0a52a086d79d6536838fe7003907709694eaaaef1dabbe999'){
+    localStorage.setItem('whale_auth','1');
+    document.getElementById('lock').style.display='none';
+    document.getElementById('content').style.display='block';
+  }else{
+    document.getElementById('err').style.display='block';
+  }
+}
+(function(){
+  if(localStorage.getItem('whale_auth')==='1'){
+    document.getElementById('lock').style.display='none';
+    document.getElementById('content').style.display='block';
+  }
+})();
+</script>
+</body>
+</html>

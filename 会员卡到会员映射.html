@@ -1,0 +1,18 @@
+<!doctype html><html lang=zh><head><meta charset=utf-8><title>会员卡到会员映射</title><style>body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;margin:24px;color:#222}
+h1{font-size:22px;border-bottom:3px solid #2c7be5;padding-bottom:8px}h2{font-size:17px;margin-top:28px;color:#1a3c6e}h3{font-size:14px;margin-top:16px;color:#555}
+table{border-collapse:collapse;width:100%;margin:8px 0;font-size:13px}th,td{border:1px solid #d0d7de;padding:6px 9px;text-align:left}th{background:#f0f4f8}tr:nth-child(even) td{background:#fafbfc}
+.meta{color:#666;font-size:12px}.warn{background:#fff4e5;border:1px solid #ffb84d;padding:10px 14px;border-radius:6px;color:#8a5300}
+.note{background:#eef6ff;border:1px solid #9ec5fe;padding:10px 14px;border-radius:6px}code{background:#f3f3f3;padding:1px 5px;border-radius:3px}</style></head><body><h1>会员卡 → 会员 · 映射关系梳理</h1>
+<p class="meta">生成时间：2026-07-20 23:41 ｜ 卡级判定来源：你的列2标注（Y/N）≡ 系统「是否会员卡(映射)」，152条交集 100% 一致 ｜ 用户级：按手机号聚合</p>
+<div class="note">📌 <b>核心定义（三层）</b>
+<ol>
+<li><b>会员卡（卡级）</b>：依据卡片类型判定该卡本身是否为会员卡。来源＝你的列2标注（Y/N），与系统「是否会员卡(映射)」完全一致。</li>
+<li><b>会员（用户级）</b>：按手机号聚合同一用户全部购卡。<br>　• <b>会员</b>：该用户任意一张卡为会员卡（<b>激活或未激活均算</b>）→ 会员；<br>　• <b>非会员</b>：该用户所有卡均为非会员卡 → 非会员。</li>
+<li><b>明确排除</b>：白鲸后台「是否会员（用户身份，列8）」＝购买人身份，与卡无关、定义不清，<b>不采用</b>。</li>
+</ol></div><h2>一、卡类型 → 是否会员卡（全量映射表）</h2><p>共 32 种卡类型：<b>会员卡 25 种</b> ｜ <b>非会员卡 7 种</b></p><h3>会员卡（Y）</h3><table><thead><tr><th>卡类型（抓取名）</th></tr></thead><tbody><tr><td>1000元</td></tr><tr><td>2000元</td></tr><tr><td>5000</td></tr><tr><td>500元</td></tr><tr><td>双榆树-100小时卡</td></tr><tr><td>双榆树-10次卡</td></tr><tr><td>双榆树-30次卡</td></tr><tr><td>双榆树-50小时</td></tr><tr><td>双榆树-半年卡</td></tr><tr><td>双榆树-双人间30小时</td></tr><tr><td>双榆树-双人间50小时</td></tr><tr><td>双榆树-四人间20小时</td></tr><tr><td>双榆树-四人间30小时</td></tr><tr><td>双榆树-季卡</td></tr><tr><td>双榆树-工作日月卡</td></tr><tr><td>双榆树-月卡</td></tr><tr><td>双榆树店-双人间20小时</td></tr><tr><td>通卡-3次卡</td></tr><tr><td>通卡-季卡</td></tr><tr><td>通卡-工作日月卡</td></tr><tr><td>通卡10次卡</td></tr><tr><td>通卡20次卡</td></tr><tr><td>通卡30小时</td></tr><tr><td>通卡30次卡</td></tr><tr><td>通卡50小时</td></tr></tbody></table><h3>非会员卡（N）</h3><table><thead><tr><th>卡类型（抓取名）</th></tr></thead><tbody><tr><td>2小时</td></tr><tr><td>3小时体验</td></tr><tr><td>4小时学习</td></tr><tr><td>单日体验</td></tr><tr><td>单日卡</td></tr><tr><td>双人间单日卡</td></tr><tr><td>双人间日卡</td></tr></tbody></table><h2>二、用户级聚合结果</h2><table><thead><tr><th>数据源</th><th>用户数(去重手机号)</th><th>会员用户</th><th>非会员用户</th><th>口径</th></tr></thead><tbody><tr><td>系统抓取 mapped.json（178笔, 已剔内部号）</td><td>125</td><td>53</td><td>72</td><td>是否会员卡(映射)=是 的手机号去重</td></tr><tr><td>你的 xlsx 快照（202笔, 含内部号）</td><td>116</td><td>45</td><td>71</td><td>列2=Y 的手机号去重</td></tr></tbody></table><div class="warn">⚠️ 两套数字差 8 个会员用户：你的 xlsx 有 18 个重复 id、且缺失 26 张系统已抓到的卡（其中含会员卡），
+故系统侧更全。日报采用系统全量数据（53 会员 / 125 用户）。</div><h2>三、与之前"错误口径"的对照</h2><table><thead><tr><th>维度</th><th>正确口径（现用）</th><th>错误口径（已弃用, 列8）</th></tr></thead><tbody><tr><td>判定依据</td><td>所持有卡片类型（列2/映射）</td><td>白鲸「是否会员」用户身份</td></tr><tr><td>聚合方式</td><td>按手机号, 持≥1张会员卡即会员</td><td>按白鲸系统打的购买人标签</td></tr><tr><td>典型差异</td><td>老会员买体验卡→仍记为会员(因另有会员卡)</td><td>老会员买体验卡→被标非会员</td></tr><tr><td>数据示例</td><td>会员 53 / 非会员 72</td><td>会员 25 / 非会员 153（混乱）</td></tr></tbody></table><h2>四、结论</h2>
+<ol>
+<li>「会员」= 持卡定义：同一手机号下只要有≥1张会员卡（激活/未激活均算）即会员；全体验卡则非会员。</li>
+<li>卡级「是否会员卡」与你的列2标注一致，日报"真会员(持卡)"已按此口径，未用列8。</li>
+<li>当前数据无作废/过期卡，故"激活或未激活均算"等价于"有会员卡即算"；若日后出现退卡/作废卡，应在映射中排除（当前未涉及）。</li>
+</ol></body></html>
