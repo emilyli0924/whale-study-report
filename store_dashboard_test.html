@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>白鲸自习室 · 店长工作台</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:#f0f2f5;padding:10px 12px 40px;color:#222}h1{font-size:20px;color:#1a73e8;margin-bottom:2px}.sub{color:#888;font-size:12px;margin-bottom:10px}.cards{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.card{flex:1;min-width:85px;background:#fff;border-radius:10px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.06);text-align:center}.card .val{font-size:26px;font-weight:700}.card .lbl{font-size:11px;color:#888;margin-top:2px}.card.blue .val{color:#1a73e8}.card.green .val{color:#34a853}.card.orange .val{color:#e8710a}.card.red .val{color:#db4437}.card.purple .val{color:#7b1fa2}.tabs{display:flex;gap:5px;margin-bottom:14px;flex-wrap:wrap}.tab{padding:8px 14px;border-radius:8px;font-size:12px;cursor:pointer;border:1px solid #ddd;background:#fff;color:#666;transition:.15s;user-select:none}.tab.active{background:#1a73e8;color:#fff;border-color:#1a73e8}.tab .cnt{font-weight:700}.section{margin-bottom:18px}.sec-hdr{font-size:15px;font-weight:700;padding:8px 0 6px;display:flex;align-items:center;gap:8px}.sub-hdr{font-size:12px;font-weight:600;color:#1a73e8;background:#f0f4ff;padding:6px 10px;border-radius:5px;margin:8px 0 4px;border-left:3px solid #1a73e8}.sub-tabs{display:flex;gap:0;margin:8px 0;border-bottom:2px solid #e0e0e0;overflow-x:auto}.sub-tab{padding:8px 14px;font-size:13px;cursor:pointer;color:#666;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .15s;white-space:nowrap;user-select:none}.sub-tab.active{color:#1a73e8;border-bottom-color:#1a73e8;font-weight:600}.sub-tab:hover:not(.active){background:#f8f9fa}.sec-hdr .dot{width:10px;height:10px;border-radius:50%}.dot-wc{background:#db4437}.dot-wel{background:#34a853}.dot-inv{background:#1a73e8}.dot-fup{background:#e8710a}.dot-meet{background:#7b1fa2}.task-item{background:#fff;border-radius:10px;padding:12px 14px;margin:5px 0;box-shadow:0 1px 3px rgba(0,0,0,.04);transition:background .2s;border-left:3px solid transparent}.task-item.done{background:#fff;opacity:1;border-left-color:#bbb}.task-item.greyed{background:#fff;opacity:1;border-left-color:#ddd}.task-name{font-size:14px;font-weight:600;margin-bottom:1px}.task-info{font-size:11px;color:#888;margin-bottom:4px}.task-script{background:#fafafa;border-radius:6px;padding:8px 28px 8px 10px;font-size:12px;color:#444;margin:4px 0;line-height:1.6;cursor:pointer;border:1px dashed #ddd;position:relative}.task-script::after{content:'📋 复制';font-size:10px;color:#aaa;position:absolute;right:8px;top:8px}.task-no-script{padding:8px 10px;font-size:12px;color:#666;margin:4px 0;background:#fafafa;border-radius:6px}.task-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}.btn{display:inline-block;padding:5px 12px;border-radius:6px;font-size:11px;cursor:pointer;border:none;transition:.15s;font-weight:500}.btn-done{background:#34a853;color:#fff}.btn-undo{background:#f5f5f5;color:#888}.btn-skip{background:#f5f5f5;color:#888}.status-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:600}.status-done{background:#e8f5e9;color:#2e7d32}.status-pending{background:#fff3e0;color:#e65100}.patrol-item{display:flex;align-items:center;gap:10px;padding:12px 14px;background:#fff;border-radius:10px;margin:4px 0;box-shadow:0 1px 3px rgba(0,0,0,.04)}.patrol-item .chk{width:24px;height:24px;border-radius:50%;border:2px solid #ccc;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;transition:.15s;flex-shrink:0}.patrol-item .chk.done{background:#34a853;border-color:#34a853;color:#fff}.profile-item{background:#fff;border-radius:10px;padding:12px 16px;margin:4px 0;box-shadow:0 1px 3px rgba(0,0,0,.04);cursor:pointer;display:flex;justify-content:space-between;align-items:center}.profile-item:hover{background:#f0f4ff}.modal-bg{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.3);z-index:100;display:flex;justify-content:center;align-items:center}.modal-box{background:#fff;border-radius:14px;padding:24px;max-width:360px;width:90%;box-shadow:0 8px 40px rgba(0,0,0,.15)}.modal-box label{display:block;font-size:12px;color:#888;margin:8px 0 4px}.modal-box select,.modal-box textarea{width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;font-size:13px;box-sizing:border-box}.modal-box textarea{min-height:60px}.modal-actions{display:flex;gap:8px;margin-top:12px;justify-content:flex-end}.modal-actions button{padding:8px 20px;border-radius:6px;cursor:pointer;border:none}.btn-cancel{background:#f5f5f5;color:#666}.btn-save{background:#1a73e8;color:#fff}@media(max-width:600px){.cards .card{min-width:60px;padding:8px}.card .val{font-size:20px}body{padding:8px 6px 40px}}</style></head><body><h1>🐋 白鲸自习室 · 店长工作台</h1><div class="sub">📅 2026-07-26 | 2026/7/26 21:00:38 | 🌙 17:30+ 回访模式</div><div class="cards" id="summary"></div><div class="tabs"><div class="tab active" data-tab="tasks" onclick="switchTab('tasks')">📋 今日任务</div><div class="tab" data-tab="patrol" onclick="switchTab('patrol')">🔄 巡店</div><div class="tab" data-tab="profiles" onclick="switchTab('profiles')">👤 画像</div><div class="tab" data-tab="members" onclick="switchTab('members')">🏷 会员管理</div></div><div id="main"></div><div id="toast" style="position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#34a853;color:#fff;padding:10px 20px;border-radius:8px;font-size:14px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.2);z-index:300;display:none"></div><script>
+const D={"statDate":"2026-07-26","isToday":true,"genTime":"2026/7/26 21:00:38","isAfterCutoff":true,"tasks":[{"type":"followup","phone":"13800000010","nick":"测试-孙储值","seat":{"area":"公共自习区A","seat":"A08","start":"09:00","end":"至今","status":"","duration":180,"_inRange":true,"dur":180},"area":"公共自习区A","room":"A08","start":"09:00","end":"至今","visitDays":2,"script":"您好！感谢您再次到来自鲸自习室。我们提供多档位会员卡，次数卡/小时卡/连续卡/储值卡均可选择，办卡更划算哦。如需了解详情，随时联系我~","isHere":true},{"type":"wechat","phone":"13800000002","nick":"测试-王查无","seat":{"area":"公共自习区B","seat":"B05","start":"18:00","end":"至今","status":"","duration":150,"_inRange":true,"dur":150},"source":"白鲸小程序","visitDays":1,"wechatStatus":"not_found","arrivalTime":"18:00","script":"微信查找不到该用户，请线下重点关注，提示用户添加微信。可赠送好评单日卡吸引添加，方便后续沟通与回访。"},{"type":"followup","phone":"13800000002","nick":"测试-王查无","seat":{"area":"公共自习区B","seat":"B05","start":"18:00","end":"至今","status":"","duration":150,"_inRange":true,"dur":150},"area":"公共自习区B","room":"B05","start":"18:00","end":"至今","visitDays":1,"script":"在大众或美团上五星好评+图片，能找我们领一张单日体验卡[耶][爱心][爱心]","isHere":true},{"type":"wechat","phone":"13800000012","nick":"测试-冯无像","seat":{"area":"公共自习区B","seat":"B02","start":"18:00","end":"至今","status":"","duration":120,"_inRange":true,"dur":120},"source":"白鲸小程序","visitDays":1,"wechatStatus":"not_added","arrivalTime":"18:00","script":"待更新（标准化添加微信话术）"},{"type":"followup","phone":"13800000012","nick":"测试-冯无像","seat":{"area":"公共自习区B","seat":"B02","start":"18:00","end":"至今","status":"","duration":120,"_inRange":true,"dur":120},"area":"公共自习区B","room":"B02","start":"18:00","end":"至今","visitDays":1,"script":"在大众或美团上五星好评+图片，能找我们领一张单日体验卡[耶][爱心][爱心]","isHere":true},{"type":"wechat","phone":"13800000001","nick":"测试-张新","seat":{"area":"公共自习区A","seat":"A12","start":"19:00","end":"至今","status":"","duration":180,"_inRange":true,"dur":180},"source":"美团","visitDays":1,"wechatStatus":"not_added","arrivalTime":"19:00","script":"待更新（标准化添加微信话术）"},{"type":"followup","phone":"13800000001","nick":"测试-张新","seat":{"area":"公共自习区A","seat":"A12","start":"19:00","end":"至今","status":"","duration":180,"_inRange":true,"dur":180},"area":"公共自习区A","room":"A12","start":"19:00","end":"至今","visitDays":1,"script":"在大众或美团上五星好评+图片，能找我们领一张单日体验卡[耶][爱心][爱心]","isHere":true},{"type":"meeting_remind","phone":"13800000006","nick":"测试-刘正在","area":"双人间","room":"双人座1","start":"20:00","end":"22:00","script":"你好，您已预约双人座1，使用时间20:00-22:00，空调已经打开。若有任何问题，欢迎随时联系我们。白鲸自习室（双榆树店），欢迎您的到来。","isHere":true},{"type":"meeting_check","phone":"13800000006","nick":"测试-刘正在","area":"双人间","room":"双人座1","start":"20:00","end":"22:00","duration":120,"script":""},{"type":"followup","phone":"13800000008","nick":"测试-吴新访","seat":{"area":"公共自习区A","seat":"A20","start":"08:00","end":"12:00","status":"","duration":240,"_inRange":false,"dur":240},"area":"公共自习区A","room":"A20","start":"08:00","end":"12:00","visitDays":1,"script":"在大众或美团上五星好评+图片，能找我们领一张单日体验卡[耶][爱心][爱心]","isHere":false},{"type":"wechat","phone":"13800000004","nick":"测试-赵待通","seat":{"area":"公共自习区B","seat":"B10","start":"09:00","end":"17:00","status":"","duration":240,"_inRange":false,"dur":240},"source":"美团","visitDays":2,"wechatStatus":"pending","arrivalTime":"09:00","script":"已发送好友申请，等待对方通过。可通过线下提醒用户确认微信好友请求。"},{"type":"followup","phone":"13800000004","nick":"测试-赵待通","seat":{"area":"公共自习区B","seat":"B10","start":"09:00","end":"17:00","status":"","duration":240,"_inRange":false,"dur":240},"area":"公共自习区B","room":"B10","start":"09:00","end":"17:00","visitDays":2,"script":"您好！感谢您再次到来自鲸自习室。我们提供多档位会员卡，次数卡/小时卡/连续卡/储值卡均可选择，办卡更划算哦。如需了解详情，随时联系我~","isHere":false},{"type":"followup","phone":"13800000009","nick":"测试-郑回访","seat":{"area":"公共自习区B","seat":"B15","start":"10:00","end":"14:00","status":"","duration":240,"_inRange":false,"dur":240},"area":"公共自习区B","room":"B15","start":"10:00","end":"14:00","visitDays":3,"script":"您好！感谢您再次到来自鲸自习室。我们提供多档位会员卡，次数卡/小时卡/连续卡/储值卡均可选择，办卡更划算哦。如需了解详情，随时联系我~","isHere":false},{"type":"wechat","phone":"13800000007","nick":"测试-周已离","seat":{"area":"大会议室（8-10人间）","seat":"8-10人座","start":"17:00","end":"18:00","status":"","duration":60,"_inRange":false,"dur":60},"source":"美团","visitDays":2,"wechatStatus":"not_added","arrivalTime":"17:00","script":"待更新（标准化添加微信话术）"},{"type":"meeting_remind","phone":"13800000007","nick":"测试-周已离","area":"大会议室（8-10人间）","room":"8-10人座","start":"17:00","end":"18:00","script":"你好，您已预约8人间，使用时间17:00-18:00，空调已经打开。若有任何问题，欢迎随时联系我们。白鲸自习室（双榆树店），欢迎您的到来。","isHere":false},{"type":"meeting_check","phone":"13800000007","nick":"测试-周已离","area":"大会议室（8-10人间）","room":"8-10人座","start":"17:00","end":"18:00","duration":60,"script":""},{"type":"followup","phone":"13800000007","nick":"测试-周已离","seat":{"area":"大会议室（8-10人间）","seat":"8-10人座","start":"17:00","end":"18:00","status":"","duration":60,"_inRange":false,"dur":60},"area":"大会议室（8-10人间）","room":"8-10人座","start":"17:00","end":"18:00","visitDays":2,"script":"您好！感谢您再次到来自鲸自习室。我们提供多档位会员卡，次数卡/小时卡/连续卡/储值卡均可选择，办卡更划算哦。如需了解详情，随时联系我~","isHere":false},{"type":"meeting_remind","phone":"13800000005","nick":"测试-陈未来","area":"四人间","room":"四人座","start":"23:00","end":"23:00","script":"你好，您已预约4人间，使用时间23:00-23:00，空调已经打开。若有任何问题，欢迎随时联系我们。白鲸自习室（双榆树店），欢迎您的到来。","isHere":false},{"type":"meeting_check","phone":"13800000005","nick":"测试-陈未来","area":"四人间","room":"四人座","start":"23:00","end":"23:00","duration":120,"script":""},{"type":"followup","phone":"13800000005","nick":"测试-陈未来","seat":{"area":"四人间","seat":"四人座","start":"23:00","end":"23:00","status":"","duration":120,"_inRange":false,"dur":120},"area":"四人间","room":"四人座","start":"23:00","end":"23:00","visitDays":1,"script":"在大众或美团上五星好评+图片，能找我们领一张单日体验卡[耶][爱心][爱心]","isHere":false},{"type":"patrol","id":"patrol_0","label":"10:00 首次巡店（座位·卫生·设备）","time":"","script":""},{"type":"patrol","id":"patrol_1","label":"14:00 二次巡店","time":"","script":""},{"type":"patrol","id":"patrol_2","label":"17:00 收尾巡店（空座·会议室·空调）","time":"","script":""}],"customers":[{"phone":"13800000011","nick":"测试-钱有像","member":true,"bitableMember":false,"isHere":true,"customerType":"成人办公","visitDays":10,"seats":[{"area":"公共自习区A","seat":"A01","start":"07:00","end":"至今","status":"","duration":400,"_inRange":true,"dur":400}]},{"phone":"13800000003","nick":"测试-李已添","member":true,"bitableMember":false,"isHere":true,"customerType":"学生","visitDays":3,"seats":[{"area":"公共自习区A","seat":"A03","start":"08:00","end":"至今","status":"","duration":300,"_inRange":true,"dur":300}]},{"phone":"13800000010","nick":"测试-孙储值","member":false,"bitableMember":true,"isHere":true,"customerType":"","visitDays":2,"seats":[{"area":"公共自习区A","seat":"A08","start":"09:00","end":"至今","status":"","duration":180,"_inRange":true,"dur":180}]},{"phone":"13800000002","nick":"测试-王查无","member":false,"bitableMember":false,"isHere":true,"customerType":"","visitDays":1,"seats":[{"area":"公共自习区B","seat":"B05","start":"18:00","end":"至今","status":"","duration":150,"_inRange":true,"dur":150}]},{"phone":"13800000012","nick":"测试-冯无像","member":false,"bitableMember":false,"isHere":true,"customerType":"","visitDays":1,"seats":[{"area":"公共自习区B","seat":"B02","start":"18:00","end":"至今","status":"","duration":120,"_inRange":true,"dur":120}]},{"phone":"13800000001","nick":"测试-张新","member":false,"bitableMember":false,"isHere":true,"customerType":"","visitDays":1,"seats":[{"area":"公共自习区A","seat":"A12","start":"19:00","end":"至今","status":"","duration":180,"_inRange":true,"dur":180}]},{"phone":"13800000006","nick":"测试-刘正在","member":true,"bitableMember":false,"isHere":true,"customerType":"老师","visitDays":5,"seats":[{"area":"双人间","seat":"双人座1","start":"20:00","end":"22:00","status":"","duration":120,"_inRange":true,"dur":120}]},{"phone":"13800000008","nick":"测试-吴新访","member":false,"bitableMember":false,"isHere":false,"customerType":"","visitDays":1,"seats":[{"area":"公共自习区A","seat":"A20","start":"08:00","end":"12:00","status":"","duration":240,"_inRange":false,"dur":240}]},{"phone":"13800000004","nick":"测试-赵待通","member":false,"bitableMember":false,"isHere":false,"customerType":"","visitDays":2,"seats":[{"area":"公共自习区B","seat":"B10","start":"09:00","end":"17:00","status":"","duration":240,"_inRange":false,"dur":240}]},{"phone":"13800000009","nick":"测试-郑回访","member":false,"bitableMember":false,"isHere":false,"customerType":"学生","visitDays":3,"seats":[{"area":"公共自习区B","seat":"B15","start":"10:00","end":"14:00","status":"","duration":240,"_inRange":false,"dur":240}]},{"phone":"13800000007","nick":"测试-周已离","member":false,"bitableMember":false,"isHere":false,"customerType":"","visitDays":2,"seats":[{"area":"大会议室（8-10人间）","seat":"8-10人座","start":"17:00","end":"18:00","status":"","duration":60,"_inRange":false,"dur":60}]},{"phone":"13800000005","nick":"测试-陈未来","member":false,"bitableMember":false,"isHere":false,"customerType":"学生","visitDays":1,"seats":[{"area":"四人间","seat":"四人座","start":"23:00","end":"23:00","status":"","duration":120,"_inRange":false,"dur":120}]}],"profiles":[{"phone":"13800000010","nick":"测试-孙储值","seat":"A08","area":"公共自习区A"},{"phone":"13800000002","nick":"测试-王查无","seat":"B05","area":"公共自习区B"},{"phone":"13800000012","nick":"测试-冯无像","seat":"B02","area":"公共自习区B"},{"phone":"13800000001","nick":"测试-张新","seat":"A12","area":"公共自习区A"},{"phone":"13800000008","nick":"测试-吴新访","seat":"A20","area":"公共自习区A"},{"phone":"13800000004","nick":"测试-赵待通","seat":"B10","area":"公共自习区B"},{"phone":"13800000007","nick":"测试-周已离","seat":"8-10人座","area":"大会议室（8-10人间）"}],"totalVisit":12,"newCount":5,"wechatCount":5,"meetCount":2,"mtFullCount":3,"followupCount":9};
+let DONE={};try{DONE=JSON.parse(localStorage.getItem('bw_done')||'{}');}catch(e){}
+let PROFILES={};try{PROFILES=JSON.parse(localStorage.getItem('bw_profiles')||'{}');}catch(e){}
+let PATROL_DONE={};try{PATROL_DONE=JSON.parse(localStorage.getItem('bw_patrol')||'{}');}catch(e){}
+let CONFIRMED={};try{CONFIRMED=JSON.parse(localStorage.getItem('bw_confirmed')||'{}');}catch(e){}
+function isEffectiveMember(c){if(c.member)return true;if(CONFIRMED[c.phone]){var d=new Date(CONFIRMED[c.phone]);var now=new Date();if((now-d)/864e5<=30)return true;}return false;}
+function needConfirm(c){return c.bitableMember&&!c.member&&!isEffectiveMember(c);}
+const NOW=new Date();function esc(s){return String(s==null?'':s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+function roomLabel(r){var m={'8-10人座':'8人间','四人座':'4人间'};return m[r]||r;}
+function isMeetingExpired(start){if(!start)return false;var p=start.split(':').map(Number);return (NOW.getHours()*60+NOW.getMinutes())>p[0]*60+p[1];}
+let curTab='tasks';
+function switchTab(t){curTab=t;document.querySelectorAll('.tab').forEach(function(x){x.classList.toggle('active',x.dataset.tab===t);});render();}
+function taskKey(t){return[t.type,t.phone||t.id||'',t.room||'',t.start||''].join('_');}
+function isDone(t){return!!DONE[taskKey(t)];}
+function markAsDone(t){DONE[taskKey(t)]=1;localStorage.setItem('bw_done',JSON.stringify(DONE));if(t.type==='meeting_remind'){curMeetTab='done';showToast('✅ 已发送，查看已完成Tab');}else if(t.type==='followup'){curFupTab='review';showToast('✅ 已发送，查看赠送好评Tab');}else{showToast('✅ 已完成');}render();renderSummary();}
+function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.style.display='block';setTimeout(function(){t.style.display='none';},2000);}
+function markUndo(t){delete DONE[taskKey(t)];localStorage.setItem('bw_done',JSON.stringify(DONE));render();renderSummary();}
+function taskHtml(t){var key=taskKey(t);var done=isDone(t);var greyed=t.type==='meeting_remind'&&t.isHere&&!done;var cls='task-item'+(done?' done':'')+(greyed?' greyed':'');
+  var name=esc(t.nick||t.label||'')+' <span style="color:#888;font-weight:400">'+esc(t.phone||'')+'</span>';var info=[];
+  var locParts=[];if(t.area)locParts.push(esc(t.area));if(t.room)locParts.push(roomLabel(t.room));else if(t.seat&&t.seat.seat)locParts.push(esc(t.seat.seat));
+  if(t.start){var tLbl=esc(t.start);if(t.end&&t.end!=='?'&&t.end!=='至今')tLbl+=' - '+esc(t.end);locParts.push(tLbl);}
+  info.push(locParts.join(' · '));
+  if(t.source)info.push(esc(t.source));if(t.visitDays)info.push(t.visitDays+'次到访');if(t.type==='wechat'&&t.arrivalTime)info.push('到店 '+esc(t.arrivalTime));
+  var confirmed=CONFIRMED[t.phone];var mm=MANUAL_MEMBER[t.phone];var isMemberBadge=mm?'<span class="status-badge status-done">🏷 '+esc(mm.type)+'</span>':(confirmed?'<span class="status-badge status-done">🏷 已标记会员</span>':'');
+  var isMeeting=t.type==='meeting_remind';var expired=isMeeting&&!done&&!greyed&&isMeetingExpired(t.start);
+  var meetTag='';if(isMeeting&&(done||greyed||expired)){meetTag=t.isHere?'<span class="status-badge" style="background:#d4edda;color:#155724">🟢 正在学习</span>':'<span class="status-badge" style="background:#f0f0f0;color:#999">⚪ 已离开</span>';}
+  var statusHtml='';if(done){statusHtml=isMeeting?'<span class="status-badge status-done">✅ 已发送</span>'+meetTag:'<span class="status-badge status-done">✅ 已完成</span>';}else if(isMemberBadge){statusHtml=isMemberBadge;}else if(greyed){statusHtml='<span class="status-badge" style="background:#e8f5e9;color:#2e7d32">🟢 已到店</span>'+meetTag;}else if(expired){statusHtml='<span class="status-badge" style="background:#eee;color:#999">⚪ 已离开</span>'+meetTag;}else if(isMeeting){statusHtml='<span class="status-badge" style="background:#fff3cd;color:#856404">🔴 未到店</span>';}else if(t.type==='confirm'){statusHtml='<span class="status-badge status-pending">❓ 待确认</span>';}
+  var bodyHtml='';
+  if(t.type==='meeting_check'){bodyHtml='<div class="task-no-script">预定 '+esc(t.start)+' - '+esc(t.end)+' | 时长 '+durStr(t.duration)+'</div>';}
+  else if(t.type==='confirm'){bodyHtml='<div style="font-size:11px;color:#888;margin:4px 0">飞书客资表标了会员但系统无记录。确认是真的会员？</div>';}
+  else if(t.script){bodyHtml='<div class="task-script" onclick="copyScript(this)">'+esc(t.script)+'</div>';}
+  var btnHtml;
+  if(t.type==='followup'){var fupDone=isDone(t);var gifted=GIFT[t.phone];var mm=MANUAL_MEMBER[t.phone];var mmBadge=mm?'<span class="status-badge status-done">🏷 '+esc(mm.type)+'</span>':'';
+    if(fupDone&&gifted)btnHtml='<button class="btn btn-done" disabled style="opacity:.7;cursor:default">🎁 已赠送</button>';
+    else if(fupDone)btnHtml='<button class="btn btn-done" onclick="markFupGift(\''+t.phone+'\')">🎁 已赠送</button>';
+    else if(mm){btnHtml=mmBadge+'<button class="btn btn-done" onclick="markFollowupDone(\''+t.phone+'\')">✅ 已发送</button>';}
+    else{btnHtml='<button class="btn btn-done" onclick="markFollowupDone(\''+t.phone+'\')">✅ 已发送</button><button class="btn btn-skip" onclick="markManualMember(\''+t.phone+'\',\'储值会员\')">🏷 储值会员</button><button class="btn btn-skip" onclick="markManualMember(\''+t.phone+'\',\'座位卡会员\')">🏷 座位卡会员</button>';}}
+  else if(done){btnHtml=t.type==='meeting_remind'?(!expired?'<button class="btn btn-done" disabled style="opacity:.7;cursor:default">✅ 已发送</button>':'<span style="font-size:11px;color:#999">时间已过</span>'):'<button class="btn btn-done" disabled style="opacity:.7;cursor:default">✅ 已完成</button>';}
+  else if(greyed)btnHtml='<span style="font-size:11px;color:#999">该客户已到店，无需发送提醒</span>';
+  else if(t.type==='wechat'){var wc=sWc[t.phone]||{};var wcStatus=wc.status||'not_added';if(wcStatus==='added'){btnHtml='<span class="status-badge status-done">✅ 添加成功</span>';}else if(wcStatus==='pending'){btnHtml='<span class="status-badge status-pending">⏳ 待通过</span><button class="btn btn-done" onclick="markWcAdded(\''+t.phone+'\')">✅ 添加成功</button>';}else{btnHtml='<input type="text" id="wc_'+t.phone+'" placeholder="微信号" value="'+esc(wc.wxId||'')+'" style="padding:4px 8px;border:1px solid #ddd;border-radius:6px;font-size:12px;width:120px;margin-right:4px"><button class="btn btn-done" onclick="markWcPending(\''+t.phone+'\')">⏳ 已添加，待通过</button><button class="btn btn-skip" onclick="markWcAdded(\''+t.phone+'\')">✅ 添加成功</button>';}}
+  else if(t.type==='confirm')btnHtml='<button class="btn btn-done" onclick="confirmMember(\''+t.phone+'\')">✅ 确认为会员(30天)</button><button class="btn btn-skip" onclick="markAsDone('+JSON.stringify(t)+')">✕ 不是会员</button>';
+  else if(isMeeting){if(expired)btnHtml='<span style="font-size:11px;color:#999">已过期，不可发送</span>';else btnHtml='<button class="btn btn-done" onclick="markMeetingSent(\''+t.phone+'\',\''+t.room+'\',\''+t.start+'\')">✅ 已发送</button>';}
+  return '<div class="'+cls+'"><div class="task-name">'+name+' '+statusHtml+'</div><div class="task-info">'+info.join(' · ')+'</div>'+bodyHtml+'<div class="task-actions">'+btnHtml+'</div></div>';
+}
+function confirmMember(phone){CONFIRMED[phone]=new Date().toISOString();localStorage.setItem('bw_confirmed',JSON.stringify(CONFIRMED));render();}
+function unconfirmMember(phone){delete CONFIRMED[phone];localStorage.setItem('bw_confirmed',JSON.stringify(CONFIRMED));render();}
+function markWcPending(phone){var input=document.getElementById('wc_'+phone);var wxId=input?input.value.trim():'';sWc[phone]={status:'pending',wxId:wxId,at:new Date().toISOString()};localStorage.setItem('bw_wc',JSON.stringify(sWc));curWcTab='pending';showToast('⏳ 待通过，查看待通过确认Tab');render();}
+function markWcAdded(phone){var input=document.getElementById('wc_'+phone);var wxId=input?input.value.trim():(sWc[phone]?sWc[phone].wxId||'':'');sWc[phone]={status:'added',wxId:wxId,at:new Date().toISOString()};localStorage.setItem('bw_wc',JSON.stringify(sWc));curWcTab='done';showToast('✅ 添加成功，查看已完成Tab');render();}
+function markWechatAdded(phone){markWcAdded(phone);}
+function markMeetingSent(phone,room,start){var t=D.tasks.find(function(x){return x.type==='meeting_remind'&&x.phone===phone&&x.room===room&&x.start===start;});if(t)markAsDone(t);else{alert('未找到任务');}}
+function markFollowupDone(phone){var t=D.tasks.find(function(x){return x.type==='followup'&&x.phone===phone;});if(t)markAsDone(t);else{alert('未找到任务');}}
+let FUP_STATUS={};try{FUP_STATUS=JSON.parse(localStorage.getItem('bw_fup')||'{}');}catch(e){}
+let GIFT={};try{GIFT=JSON.parse(localStorage.getItem('bw_gift')||'{}');}catch(e){}
+let MANUAL_MEMBER={};try{MANUAL_MEMBER=JSON.parse(localStorage.getItem('bw_manual')||'{}');}catch(e){}
+let sWc={};try{sWc=JSON.parse(localStorage.getItem('bw_wc')||'{}');}catch(e){}
+function setFupStatus(phone,st){FUP_STATUS[phone]=st;localStorage.setItem('bw_fup',JSON.stringify(FUP_STATUS));render();}
+function markFupGift(phone){GIFT[phone]=1;localStorage.setItem('bw_gift',JSON.stringify(GIFT));curFupTab='done';showToast('🎁 已赠送，查看已完成Tab');render();}
+function markManualMember(phone,type){MANUAL_MEMBER[phone]={type:type,at:new Date().toISOString()};localStorage.setItem('bw_manual',JSON.stringify(MANUAL_MEMBER));showToast('🏷 已标记为'+type+'，请定期Review');render();}
+function unmarkManualMember(phone){delete MANUAL_MEMBER[phone];localStorage.setItem('bw_manual',JSON.stringify(MANUAL_MEMBER));render();}
+let curMeetTab='need';function setMeetTab(k){curMeetTab=k;render();}
+let curFupTab='pending';function setFupTab(k){curFupTab=k;render();}
+let curWcTab='need';function setWcTab(k){curWcTab=k;render();}
+function renderTasks(){var order=[['wechat','📱 添加微信'],['confirm','🔍 待确认会员'],['meeting','📢 会议室提醒'],['followup','📞 回访（17:00后处理）']];
+  var html='';var any=false;
+  order.forEach(function(e){var t=e[0],lbl=e[1];var items;
+    if(t==='wechat'){items=D.tasks.filter(function(x){return x.type==='wechat';});if(!items.length)return;any=true;
+      var needAdd=items.filter(function(x){var wc=sWc[x.phone]||{};return!wc.status||wc.status==='not_added';});
+      var pendingWc=items.filter(function(x){var wc=sWc[x.phone]||{};return wc.status==='pending';});
+      var doneWc=items.filter(function(x){var wc=sWc[x.phone]||{};return wc.status==='added';});
+      subHtml='<div class="section"><div class="sec-hdr">'+lbl+'</div><div class="sub-tabs">';
+      var tabs=[['need','📱 添加微信',needAdd.length],['pending','⏳ 待通过确认',pendingWc.length],['done','✅ 已完成',doneWc.length]];
+      tabs.forEach(function(tb){var k=tb[0],n=tb[1],c=tb[2];var cls='sub-tab'+(curWcTab===k?' active':'');subHtml+='<div class="'+cls+'" onclick="setWcTab(\''+k+'\')">'+n+' · '+c+'</div>';});
+      subHtml+='</div>';
+      var curWcItems=curWcTab==='pending'?pendingWc:curWcTab==='done'?doneWc:needAdd;
+      if(curWcItems.length)curWcItems.forEach(function(t){subHtml+=taskHtml(t);});
+      else subHtml+='<div style="padding:14px;color:#999;font-size:12px;text-align:center">这一组暂无任务</div>';
+      subHtml+='</div>';html+=subHtml;return;}
+    else if(t==='meeting'){items=D.tasks.filter(function(x){return x.type==='meeting_remind';});if(!items.length)return;any=true;
+      var needRemind=items.filter(function(x){return!isDone(x)&&!x.isHere&&!isMeetingExpired(x.start);});
+      var done=items.filter(function(x){return isDone(x);});
+      var arrived=items.filter(function(x){return!isDone(x)&&(x.isHere||isMeetingExpired(x.start));});
+      subHtml='<div class="section"><div class="sec-hdr">'+lbl+'</div><div class="sub-tabs">';
+      var tabs=[['need','⏰ 需提醒',needRemind.length],['done','✅ 已完成',done.length],['arrived','🟢 已到店',arrived.length]];
+      tabs.forEach(function(tb){var k=tb[0],n=tb[1],c=tb[2];var cls='sub-tab'+(curMeetTab===k?' active':'');subHtml+='<div class="'+cls+'" onclick="setMeetTab(\''+k+'\')">'+n+' · '+c+'</div>';});
+      subHtml+='</div>';
+      var curItems=curMeetTab==='done'?done:curMeetTab==='arrived'?arrived:needRemind;
+      if(curItems.length){
+        curItems.sort(function(a,b){return b.start.localeCompare(a.start);}).forEach(function(t){subHtml+=taskHtml(t);});
+      }else{subHtml+='<div style="padding:14px;color:#999;font-size:12px;text-align:center">这一组暂无任务</div>';}
+      subHtml+='</div>';html+=subHtml;return;
+    }
+    else if(t==='followup'){items=D.tasks.filter(function(x){return x.type==='followup';});if(!items.length)return;any=true;
+      var pending=items.filter(function(x){return!isDone(x);});
+      var reviewTab=items.filter(function(x){return isDone(x)&&!GIFT[x.phone];});
+      var doneTab=items.filter(function(x){return isDone(x)&&GIFT[x.phone];});
+      subHtml='<div class="section"><div class="sec-hdr">'+lbl+'</div><div class="sub-tabs">';
+      var tabs=[['pending','📞 需回访',pending.length],['review','🎁 赠送好评',reviewTab.length],['done','✅ 已完成',doneTab.length]];
+      tabs.forEach(function(tb){var k=tb[0],n=tb[1],c=tb[2];var cls='sub-tab'+(curFupTab===k?' active':'');subHtml+='<div class="'+cls+'" onclick="setFupTab(\''+k+'\')">'+n+' · '+c+'</div>';});
+      subHtml+='</div>';
+      var curFupItems=curFupTab==='review'?reviewTab:curFupTab==='done'?doneTab:pending;
+      if(curFupItems.length)curFupItems.forEach(function(t){subHtml+=taskHtml(t);});
+      else subHtml+='<div style="padding:14px;color:#999;font-size:12px;text-align:center">这一组暂无任务</div>';
+      subHtml+='</div>';html+=subHtml;return;
+    }
+    else if(t==='confirm'){items=D.customers.filter(function(x){return needConfirm(x);}).map(function(c){return{type:'confirm',phone:c.phone,nick:c.nick,bitableMember:c.bitableMember,seats:c.seats,isHere:c.isHere};});}
+    else{items=D.tasks.filter(function(x){return x.type===t;});}
+    if(!items.length)return;any=true;
+    var pending=items.filter(function(x){return!isDone(x)&&!(x.type==='meeting_remind'&&x.isHere);}).length;var all=items.length;
+    html+='<div class="section"><div class="sec-hdr">'+lbl+' · <span style="color:#34a853">已完成 '+(all-pending)+'</span> / 待处理 '+pending+'</div>';
+    items.sort(function(a,b){return isDone(a)-isDone(b);}).forEach(function(t){html+=taskHtml(t);});
+    html+='</div>';
+  });
+  return any?html:'<div style="text-align:center;color:#34a853;padding:40px;font-size:16px">🎉 今天没有需要处理的任务</div>';
+}
+let CLEAN_DONE={};try{CLEAN_DONE=JSON.parse(localStorage.getItem('bw_clean')||'{}');}catch(e){}
+let SUPPLY={};try{SUPPLY=JSON.parse(localStorage.getItem('bw_supply')||'{}');}catch(e){}
+function cleanKey(t){return D.statDate+'_'+t.room+'_'+t.start;}
+function toggleClean(t){var k=cleanKey(t);CLEAN_DONE[k]=CLEAN_DONE[k]?null:Date.now();localStorage.setItem('bw_clean',JSON.stringify(CLEAN_DONE));render();}
+function toggleSupply(name){var k=D.statDate+'_'+name;if(!SUPPLY[k])SUPPLY[k]={status:'ok'};SUPPLY[k].status=SUPPLY[k].status==='ok'?'need':'ok';localStorage.setItem('bw_supply',JSON.stringify(SUPPLY));render();}
+function setSupplyNote(name,val){var k=D.statDate+'_'+name;if(!SUPPLY[k])SUPPLY[k]={status:'ok'};SUPPLY[k].note=val;localStorage.setItem('bw_supply',JSON.stringify(SUPPLY));}
+function renderPatrol(){var html='';
+  var checks=D.tasks.filter(function(x){return x.type==='meeting_check';});
+  if(checks.length){html+='<div class="section"><div class="sec-hdr">🏢 会议室打扫</div>';
+    checks.forEach(function(t){var ck=cleanKey(t);var cleaned=CLEAN_DONE[ck];var info=esc(t.room)+' · '+esc(t.start)+' - '+esc(t.end)+' · '+durStr(t.duration);
+      html+='<div class="patrol-item"><div class="chk'+(cleaned?' done':'')+'" onclick="toggleClean(D.tasks.find(function(x){return x.type===\'meeting_check\'&&x.room===\''+t.room+'\'&&x.start===\''+t.start+'\';}))">'+(cleaned?'✓':'')+'</div><div style="flex:1;font-size:13px;color:'+(cleaned?'#888':'#222')+'">'+info+(cleaned?' <span class="status-badge status-done">已打扫</span>':'')+'</div></div>';});
+    html+='</div>';}
+  html+='<div class="section"><div class="sec-hdr">🔄 定时巡店</div>';
+  html+=D.tasks.filter(function(x){return x.type==='patrol';}).map(function(p,i){var done=PATROL_DONE[p.id];return'<div class="patrol-item"><div class="chk'+(done?' done':'')+'" onclick="togglePatrol(\''+p.id+'\')">'+(done?'✓':'')+'</div><div style="flex:1;font-size:14px;color:'+(done?'#888':'#222')+'">'+esc(p.label)+'</div></div>';}).join('');
+  html+='</div>';
+  var supplies=['纸巾','茶包','零食'];
+  html+='<div class="section"><div class="sec-hdr">📦 常用物资检查</div>';
+  supplies.forEach(function(name){var k=D.statDate+'_'+name;var s=SUPPLY[k]||{status:'ok'};var need=s.status==='need';
+    html+='<div class="patrol-item"><div class="chk'+(need?'':' done')+'" style="background:'+(need?'#fff':'#34a853')+';border-color:'+(need?'#db4437':'#34a853')+';color:#fff;cursor:pointer" onclick="toggleSupply(\''+name+'\')">'+(need?'!':'✓')+'</div>';
+    html+='<div style="flex:1;font-size:14px;color:'+(need?'#db4437':'#222')+'">'+name+' '+(need?'<span class="status-badge status-pending">需补充</span>':'<span class="status-badge status-done">充足</span>')+'</div>';
+    html+='<input type="text" placeholder="备注" value="'+esc(s.note||'')+'" style="padding:3px 8px;border:1px solid #ddd;border-radius:6px;font-size:11px;width:100px;margin-left:6px" onblur="setSupplyNote(\''+name+'\',this.value)"></div>';});
+  html+='</div>';return html;}
+function togglePatrol(id){PATROL_DONE[id]=PATROL_DONE[id]?null:Date.now();localStorage.setItem('bw_patrol',JSON.stringify(PATROL_DONE));render();}
+function renderProfiles(){if(!D.profiles.length)return'<div style="text-align:center;color:#34a853;padding:20px">✅ 所有到店客户已有画像</div>';
+  return D.profiles.map(function(p){var info=[esc(p.phone)];if(p.seat)info.push(esc(p.seat));if(p.area)info.push(esc(p.area));return'<div class="profile-item" onclick="openProfile(\''+p.phone+'\',\''+(p.nick||'').replace(/'/g,'\\u2019')+'\')"><div><span style="font-weight:600">'+esc(p.nick||p.phone)+'</span><div style="font-size:11px;color:#888">'+info.join(' · ')+'</div></div><span style="color:#1a73e8;flex-shrink:0;margin-left:8px">填写画像 →</span></div>';}).join('');
+}
+function openProfile(phone,nick){document.querySelectorAll('.modal-bg').forEach(function(m){m.remove();});
+  var pf=PROFILES[phone]||{gender:'',type:'',grade:'',note:''};
+  var selG=['','男','女'].map(function(v){return'<option value="'+v+'"'+(pf.gender===v?' selected':'')+'>'+(v||'不涉及')+'</option>';}).join('');
+  var selT=['','家长','学生','老师','成人办公','其他'].map(function(v){return'<option value="'+v+'"'+(pf.type===v?' selected':'')+'>'+(v||'不涉及')+'</option>';}).join('');
+  var selR=['','小学','初高中','大学','研究生'].map(function(v){return'<option value="'+v+'"'+(pf.grade===v?' selected':'')+'>'+(v||'不涉及')+'</option>';}).join('');
+  var m=document.createElement('div');m.className='modal-bg';
+  m.innerHTML='<div class="modal-box"><h3>👤 '+esc(nick||phone)+'</h3><div style="font-size:12px;color:#888;margin-bottom:8px">'+phone+'</div>'
+    +'<label>性别</label><select id="pf_gender">'+selG+'</select>'
+    +'<label>类型</label><select id="pf_type">'+selT+'</select>'
+    +'<label>年级</label><select id="pf_grade">'+selR+'</select>'
+    +'<label>备注</label><textarea id="pf_note">'+esc(pf.note||'')+'</textarea>'
+    +'<div class="modal-actions"><button class="btn-cancel" onclick="this.closest(\'.modal-bg\').remove()">取消</button><button class="btn-save" onclick="saveProfile(\''+phone+'\')">💾 保存</button></div></div>';
+  document.body.appendChild(m);m.addEventListener('click',function(e){if(e.target===m)m.remove();});
+}
+function saveProfile(phone){var pf={gender:document.getElementById('pf_gender').value,type:document.getElementById('pf_type').value,grade:document.getElementById('pf_grade').value,note:document.getElementById('pf_note').value.trim()};if(pf.gender||pf.type||pf.grade||pf.note)PROFILES[phone]=pf;else delete PROFILES[phone];localStorage.setItem('bw_profiles',JSON.stringify(PROFILES));document.querySelector('.modal-bg').remove();render();}
+function copyScript(el){var text=el.textContent.replace(/📋 复制/,'').trim();navigator.clipboard?.writeText(text).then(function(){var orig=el.style.background;el.style.background='#e8f5e9';setTimeout(function(){el.style.background=orig;},800);});}
+function durStr(min){if(!min)return '0分钟';var h=Math.floor(min/60),m=min%60;return h?h+'小时'+(m?m+'分':''):m+'分钟';}
+function renderMembers(){var keys=Object.keys(MANUAL_MEMBER);var now=new Date();
+  if(!keys.length){return'<div style="text-align:center;color:#888;padding:40px;font-size:14px">暂无手动标记的会员。<br><span style="font-size:12px;color:#aaa">在回访任务中点击「储值会员」或「座位卡会员」即可标记</span></div>';}
+  var items=keys.map(function(ph){var mm=MANUAL_MEMBER[ph];var c=D.customers.find(function(x){return x.phone===ph;});var nick=c?c.nick:'';var vd=c?c.visitDays:0;
+    var at=new Date(mm.at);var days=Math.floor((now-at)/864e5);var needReview=days>=30;
+    return{phone:ph,nick:nick,type:mm.type,at:mm.at,days:days,needReview:needReview,vd:vd};});
+  items.sort(function(a,b){return b.days-a.days;});
+  var reviewCount=items.filter(function(x){return x.needReview;}).length;
+  var html='<div class="section"><div class="sec-hdr">🏷 手动标记会员 · '+keys.length+'人';
+  if(reviewCount)html+=' <span class="status-badge" style="background:#fff3cd;color:#856404">⚠️ '+reviewCount+'人待Review</span>';
+  html+='</div>';
+  html+='<div style="font-size:12px;color:#888;margin-bottom:8px">储值卡/座位卡会员可能不在系统记录中，手动标记后需每月Review是否仍为会员</div>';
+  items.forEach(function(it){
+    var bg=it.needReview?'#fff8e1':'#fff';var border=it.needReview?'border-left:3px solid #ffc107':'border-left:3px solid #4caf50';
+    html+='<div class="task-item" style="background:'+bg+';'+border+'">';
+    html+='<div class="task-name">'+esc(it.nick||it.phone)+' <span style="color:#888;font-weight:400">'+esc(it.phone)+'</span></div>';
+    html+='<div class="task-info">'+esc(it.type)+' · '+it.vd+'次到访 · 标记于 '+esc(it.at.slice(0,10))+' · '+it.days+'天前';
+    if(it.needReview)html+=' <span class="status-badge" style="background:#ffc107;color:#fff">⚠️ 需Review</span>';
+    html+='</div>';
+    html+='<div class="task-actions"><button class="btn btn-done" onclick="reviewManualMember(\''+it.phone+'\')">🔄 已Review(重置)</button><button class="btn btn-skip" onclick="unmarkManualMember(\''+it.phone+'\')">❌ 取消标记</button></div>';
+    html+='</div>';});
+  html+='</div>';
+  html+='<div style="text-align:center;margin-top:14px"><button class="btn btn-done" onclick="exportManualMember()">📥 导出member_manual.json</button></div>';
+  return html;}
+function reviewManualMember(phone){if(MANUAL_MEMBER[phone]){MANUAL_MEMBER[phone].at=new Date().toISOString();localStorage.setItem('bw_manual',JSON.stringify(MANUAL_MEMBER));showToast('🔄 Review日期已更新');render();}}
+function exportManualMember(){var data=JSON.stringify(MANUAL_MEMBER,null,2);var blob=new Blob([data],{type:'application/json'});var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download='member_manual.json';a.click();URL.revokeObjectURL(url);showToast('📥 已导出member_manual.json');}
+function render(){var el=document.getElementById('main');if(curTab==='tasks')el.innerHTML=renderTasks();else if(curTab==='patrol')el.innerHTML=renderPatrol();else if(curTab==='profiles')el.innerHTML=renderProfiles();else if(curTab==='members')el.innerHTML=renderMembers();}
+function renderSummary(){document.getElementById('summary').innerHTML='<div class="card red"><div class="val">'+D.wechatCount+'</div><div class="lbl">待加微信</div></div><div class="card purple"><div class="val">'+D.meetCount+'/'+D.mtFullCount+'</div><div class="lbl">会议室提醒(未/全)</div></div><div class="card orange"><div class="val">'+D.followupCount+'</div><div class="lbl">回访(17:00后)</div></div><div class="card green"><div class="val">'+D.totalVisit+'</div><div class="lbl">今日到店</div></div>';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){var m=document.querySelector('.modal-bg');if(m)m.remove();}});
+// ======== TEST MODE: auto-seed localStorage ========
+var _tsk=function(t,p,r,s){return[t,p||'',r||'',s||''].join('_');};
+var _today=new Date().toISOString().slice(0,10);
+var _td=todayStr;
+if(!localStorage.getItem('bw_done')){
+  // 会议室提醒 - 已发送(done): 陈未来(13800000005) 的未来会议
+  DONE[_tsk('meeting_remind','13800000005','四人座','23:00')]=1;
+  // 回访 - 已发送(done): 吴新访(13800000008) + 郑回访(13800000009)
+  DONE[_tsk('followup','13800000008')]=1;
+  DONE[_tsk('followup','13800000009')]=1;
+  localStorage.setItem('bw_done',JSON.stringify(DONE));
+}
+if(!localStorage.getItem('bw_wc')){
+  sWc['13800000003']={status:'added',wxId:'test_li001',at:new Date().toISOString()};
+  sWc['13800000004']={status:'pending',wxId:'test_zhao001',at:new Date().toISOString()};
+  localStorage.setItem('bw_wc',JSON.stringify(sWc));
+}
+if(!localStorage.getItem('bw_gift')){
+  GIFT['13800000008']=1;
+  localStorage.setItem('bw_gift',JSON.stringify(GIFT));
+}
+if(!localStorage.getItem('bw_manual')){
+  MANUAL_MEMBER['13800000010']={type:'储值会员',at:new Date().toISOString()};
+  MANUAL_MEMBER['13800000011']={type:'座位卡会员',at:new Date(Date.now()-35*864e5).toISOString()};
+  localStorage.setItem('bw_manual',JSON.stringify(MANUAL_MEMBER));
+}
+if(!localStorage.getItem('bw_clean')){
+  CLEAN_DONE[_today+'_8-10人座_17:00']=Date.now();
+  localStorage.setItem('bw_clean',JSON.stringify(CLEAN_DONE));
+}
+if(!localStorage.getItem('bw_supply')){
+  SUPPLY[_today+'_纸巾']={status:'ok'};
+  SUPPLY[_today+'_茶包']={status:'need',note:'仅剩2包'};
+  SUPPLY[_today+'_零食']={status:'ok',note:'饼干够'};
+  localStorage.setItem('bw_supply',JSON.stringify(SUPPLY));
+}
+if(!localStorage.getItem('bw_patrol')){
+  PATROL_DONE['patrol_0']=Date.now();
+  localStorage.setItem('bw_patrol',JSON.stringify(PATROL_DONE));
+}
+if(!localStorage.getItem('bw_confirmed')){
+  CONFIRMED['13800000011']=new Date().toISOString();
+  localStorage.setItem('bw_confirmed',JSON.stringify(CONFIRMED));
+}
+if(!localStorage.getItem('bw_profiles')){
+  PROFILES['13800000012']={gender:'男',type:'学生',grade:'初高中',note:'测试备注'};
+  localStorage.setItem('bw_profiles',JSON.stringify(PROFILES));
+}
+renderSummary();render();
+</script></body></html>
