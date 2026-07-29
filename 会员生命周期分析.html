@@ -17,11 +17,11 @@ th{background:#f7f9fc;color:#555;font-weight:600}
 .warn{background:#fff8e6;border:1px solid #ffe08a;border-radius:8px;padding:10px 14px;font-size:13px;color:#7a5a00;margin:10px 0}
 </style></head><body>
 <h1>会员生命周期分析</h1>
-<div class="sub">生成时间：2026/7/29 08:53:53 ｜ 数据源：会员卡购买列表（已映射）+ 飞书到店记录（2026-04-12 起）</div>
+<div class="sub">生成时间：2026/7/30 07:57:05 ｜ 数据源：会员卡购买列表（已映射）+ 飞书到店记录（2026-04-12 起）</div>
 
 <div class="kpis">
   <div class="kpi"><div class="kt">客户总数</div><div class="kv">132</div><div class="ks">去重手机号</div></div>
-  <div class="kpi"><div class="kt">昨日新增客户</div><div class="kv">0</div><div class="ks">昨日(2026-07-28)首购</div></div>
+  <div class="kpi"><div class="kt">昨日新增客户</div><div class="kv">0</div><div class="ks">昨日(2026-07-29)首购</div></div>
   <div class="kpi"><div class="kt">真实会员</div><div class="kv">62</div><div class="ks">是否会员卡=是</div></div>
   <div class="kpi"><div class="kt">已激活会员</div><div class="kv">52</div><div class="ks">含多卡≥1张已激活</div></div>
   <div class="kpi"><div class="kt">未激活会员</div><div class="kv">10</div><div class="ks">全部未激活</div></div>
@@ -35,9 +35,9 @@ th{background:#f7f9fc;color:#555;font-weight:600}
     <div class="kpi"><div class="kt">总会员人数</div><div class="kv">62</div><div class="ks">真实会员(去重手机号)</div></div>
     <div class="kpi"><div class="kt">已激活会员</div><div class="kv">52</div><div class="ks">含多卡中至少1张已激活</div></div>
     <div class="kpi"><div class="kt">未激活会员</div><div class="kv">10</div><div class="ks">全部会员卡未激活</div></div>
-    <div class="kpi"><div class="kt">已到期/失效会员</div><div class="kv">4</div><div class="ks">全部卡不可用</div></div>
-    <div class="kpi"><div class="kt">当日新增会员</div><div class="kv">0</div><div class="ks">今日(2026-07-29)首购</div></div>
-    <div class="kpi"><div class="kt">昨日新增会员</div><div class="kv">0</div><div class="ks">昨日(2026-07-28)首购</div></div>
+    <div class="kpi"><div class="kt">已到期/失效会员</div><div class="kv">5</div><div class="ks">全部卡不可用</div></div>
+    <div class="kpi"><div class="kt">当日新增会员</div><div class="kv">0</div><div class="ks">今日(2026-07-30)首购</div></div>
+    <div class="kpi"><div class="kt">昨日新增会员</div><div class="kv">0</div><div class="ks">昨日(2026-07-29)首购</div></div>
   </div>
   <div style="display:flex;gap:20px;flex-wrap:wrap">
     <div style="flex:1;min-width:280px"><b>激活会员结构</b><div style="margin:6px 0">
@@ -50,7 +50,7 @@ th{background:#f7f9fc;color:#555;font-weight:600}
       <div style="width:90px;font-size:12px;color:#555;text-align:right">未激活</div>
       <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:19.2%;background:#1e7e34;height:18px"></div></div>
       <div style="width:48px;font-size:12px;color:#333">10</div>
-    </div></div><div style="font-size:12px;color:#888;margin-top:4px">注：失效会员(4人)中，若有任意一张曾激活卡则已计入"已激活"列。</div></div>
+    </div></div><div style="font-size:12px;color:#888;margin-top:4px">注：失效会员(5人)中，若有任意一张曾激活卡则已计入"已激活"列。</div></div>
     <div style="flex:1;min-width:280px">
       <b>会员卡类型分布（座位卡 vs 会议室卡）</b>
       <div style="margin:6px 0">
@@ -121,7 +121,7 @@ th{background:#f7f9fc;color:#555;font-weight:600}
       </div>
     </div>
   </div>
-  <p style="font-size:13px;color:#888">今日(2026-07-29)与昨日(2026-07-28)暂无新增会员。</p>
+  <p style="font-size:13px;color:#888">今日(2026-07-30)与昨日(2026-07-29)暂无新增会员。</p>
 </div>
 
 <div class="card"><h2>① 会员权益状态（不止看有效期，结合次数/时长用尽）</h2>
@@ -130,47 +130,49 @@ th{background:#f7f9fc;color:#555;font-weight:600}
     <div style="display:flex;align-items:center;gap:8px;margin:3px 0">
       <div style="width:90px;font-size:12px;color:#555;text-align:right">有效(剩余小时>0)</div>
       <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:100.0%;background:#00897b;height:18px"></div></div>
-      <div style="width:48px;font-size:12px;color:#333">38</div>
+      <div style="width:48px;font-size:12px;color:#333">37</div>
     </div>
     <div style="display:flex;align-items:center;gap:8px;margin:3px 0">
       <div style="width:90px;font-size:12px;color:#555;text-align:right">有效(在期)</div>
-      <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:36.8%;background:#00897b;height:18px"></div></div>
+      <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:37.8%;background:#00897b;height:18px"></div></div>
       <div style="width:48px;font-size:12px;color:#333">14</div>
     </div>
     <div style="display:flex;align-items:center;gap:8px;margin:3px 0">
       <div style="width:90px;font-size:12px;color:#555;text-align:right">未激活·在期</div>
-      <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:36.8%;background:#00897b;height:18px"></div></div>
+      <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:37.8%;background:#00897b;height:18px"></div></div>
       <div style="width:48px;font-size:12px;color:#333">14</div>
     </div>
     <div style="display:flex;align-items:center;gap:8px;margin:3px 0">
       <div style="width:90px;font-size:12px;color:#555;text-align:right">有效(次数>0)</div>
-      <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:21.1%;background:#00897b;height:18px"></div></div>
+      <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:21.6%;background:#00897b;height:18px"></div></div>
       <div style="width:48px;font-size:12px;color:#333">8</div>
     </div>
     <div style="display:flex;align-items:center;gap:8px;margin:3px 0">
       <div style="width:90px;font-size:12px;color:#555;text-align:right">时长用尽</div>
-      <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:10.5%;background:#00897b;height:18px"></div></div>
-      <div style="width:48px;font-size:12px;color:#333">4</div>
+      <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:13.5%;background:#00897b;height:18px"></div></div>
+      <div style="width:48px;font-size:12px;color:#333">5</div>
     </div>
     <div style="display:flex;align-items:center;gap:8px;margin:3px 0">
       <div style="width:90px;font-size:12px;color:#555;text-align:right">已过期(余额耗尽)</div>
-      <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:7.9%;background:#00897b;height:18px"></div></div>
+      <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:8.1%;background:#00897b;height:18px"></div></div>
       <div style="width:48px;font-size:12px;color:#333">3</div>
     </div></div></div>
     <div style="flex:1;min-width:260px"><b>按人去重</b><div style="margin:6px 0">
     <div style="display:flex;align-items:center;gap:8px;margin:3px 0">
       <div style="width:90px;font-size:12px;color:#555;text-align:right">权益有效</div>
       <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:100.0%;background:#fb8c00;height:18px"></div></div>
-      <div style="width:48px;font-size:12px;color:#333">58</div>
+      <div style="width:48px;font-size:12px;color:#333">57</div>
     </div>
     <div style="display:flex;align-items:center;gap:8px;margin:3px 0">
       <div style="width:90px;font-size:12px;color:#555;text-align:right">耗尽/全过期</div>
-      <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:6.9%;background:#fb8c00;height:18px"></div></div>
-      <div style="width:48px;font-size:12px;color:#333">4</div>
+      <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:8.8%;background:#fb8c00;height:18px"></div></div>
+      <div style="width:48px;font-size:12px;color:#333">5</div>
     </div></div></div>
   </div>
-  <div class="warn">⚠️ 修正点：次卡（10/30次卡）看「可预约次数」，小时卡（50小时/双人间）看「剩余可用小时数」，时间卡（月/季/储值）只看有效期。7 张会员卡日期未到但权益已耗尽（小时数用完），不能算"在期"。</div>
-  <table><thead><tr><th>手机号</th><th>卡类型</th><th>权益状态</th><th>剩余次数</th><th>剩余小时</th><th>有效期截止</th></tr></thead><tbody><tr><td>18235278826</td><td>双榆树店-双人间20小时</td>
+  <div class="warn">⚠️ 修正点：次卡（10/30次卡）看「可预约次数」，小时卡（50小时/双人间）看「剩余可用小时数」，时间卡（月/季/储值）只看有效期。8 张会员卡日期未到但权益已耗尽（小时数用完），不能算"在期"。</div>
+  <table><thead><tr><th>手机号</th><th>卡类型</th><th>权益状态</th><th>剩余次数</th><th>剩余小时</th><th>有效期截止</th></tr></thead><tbody><tr><td>13269213508</td><td>双榆树-双人间30小时</td>
+      <td><span class="tag t-warn">时长用尽</span></td>
+      <td>0</td><td>0</td><td>2027-07-22</td></tr><tr><td>18235278826</td><td>双榆树店-双人间20小时</td>
       <td><span class="tag t-warn">时长用尽</span></td>
       <td>0</td><td>0</td><td>2027-05-03</td></tr><tr><td>15614195994</td><td>双榆树-双人间30小时</td>
       <td><span class="tag t-warn">时长用尽</span></td>
@@ -180,11 +182,11 @@ th{background:#f7f9fc;color:#555;font-weight:600}
       <td><span class="tag t-warn">时长用尽</span></td>
       <td>5</td><td>0</td><td>2027-05-20</td></tr><tr><td>13601106640</td><td>5000</td>
       <td><span class="tag t-warn">已过期(余额耗尽)</span></td>
-      <td>0</td><td>0</td><td>2028-07-27</td></tr><tr><td>13261173969</td><td>500元</td>
+      <td>0</td><td>0</td><td>2028-07-29</td></tr><tr><td>13261173969</td><td>500元</td>
       <td><span class="tag t-warn">已过期(余额耗尽)</span></td>
-      <td>0</td><td>0</td><td>2027-07-28</td></tr><tr><td>13593154709</td><td>1000元</td>
+      <td>0</td><td>0</td><td>2027-07-30</td></tr><tr><td>13593154709</td><td>1000元</td>
       <td><span class="tag t-warn">已过期(余额耗尽)</span></td>
-      <td>0</td><td>0</td><td>2027-07-28</td></tr></tbody></table>
+      <td>0</td><td>0</td><td>2027-07-30</td></tr></tbody></table>
 </div>
 
 <!-- 转化规律卡片已按需求移除（数据量过少：体验→会员转化样本不足以支撑分析） -->
@@ -243,7 +245,7 @@ th{background:#f7f9fc;color:#555;font-weight:600}
       <div style="width:48px;font-size:12px;color:#333">27</div>
     </div></div></div>
     <div style="flex:2;min-width:320px"><b>到店客户累计到店次数（Top 15 · 微信名 + 手机尾号）</b>
-      <table><thead><tr><th>微信名</th><th>手机尾号</th><th>累计到店</th><th>总时长(分)</th></tr></thead><tbody><tr><td>高</td><td>0568</td><td>84</td><td>62468</td></tr><tr><td>做自己的梦</td><td>9530</td><td>72</td><td>39554</td></tr><tr><td>千山</td><td>6718</td><td>71</td><td>53130</td></tr><tr><td>生花</td><td>5994</td><td>63</td><td>11040</td></tr><tr><td>开心</td><td>1992</td><td>53</td><td>7080</td></tr><tr><td>Lucian</td><td>2897</td><td>49</td><td>34330</td></tr><tr><td>回旋</td><td>7062</td><td>49</td><td>22860</td></tr><tr><td>Z.</td><td>7373</td><td>41</td><td>4540</td></tr><tr><td>企鹅叶子🍃YN</td><td>5466</td><td>36</td><td>3388</td></tr><tr><td>-</td><td>0252</td><td>36</td><td>7560</td></tr><tr><td>小芹菜</td><td>2497</td><td>35</td><td>6239</td></tr><tr><td>yuanjiachun</td><td>0215</td><td>30</td><td>7279</td></tr><tr><td>9</td><td>6110</td><td>27</td><td>4340</td></tr><tr><td>y</td><td>9916</td><td>23</td><td>9409</td></tr><tr><td>07Nacissesalleopital_</td><td>3969</td><td>22</td><td>12959</td></tr></tbody></table>
+      <table><thead><tr><th>微信名</th><th>手机尾号</th><th>累计到店</th><th>总时长(分)</th></tr></thead><tbody><tr><td>高</td><td>0568</td><td>85</td><td>63308</td></tr><tr><td>做自己的梦</td><td>9530</td><td>73</td><td>39794</td></tr><tr><td>千山</td><td>6718</td><td>72</td><td>54030</td></tr><tr><td>生花</td><td>5994</td><td>63</td><td>11040</td></tr><tr><td>开心</td><td>1992</td><td>53</td><td>7080</td></tr><tr><td>Lucian</td><td>2897</td><td>50</td><td>35170</td></tr><tr><td>回旋</td><td>7062</td><td>49</td><td>22860</td></tr><tr><td>Z.</td><td>7373</td><td>41</td><td>4540</td></tr><tr><td>企鹅叶子🍃YN</td><td>5466</td><td>37</td><td>3478</td></tr><tr><td>-</td><td>0252</td><td>36</td><td>7560</td></tr><tr><td>小芹菜</td><td>2497</td><td>35</td><td>6239</td></tr><tr><td>yuanjiachun</td><td>0215</td><td>30</td><td>7279</td></tr><tr><td>9</td><td>6110</td><td>27</td><td>4340</td></tr><tr><td>y</td><td>9916</td><td>23</td><td>9409</td></tr><tr><td>07Nacissesalleopital_</td><td>3969</td><td>22</td><td>12959</td></tr></tbody></table>
     </div>
   </div>
   <div class="warn">📍 说明：卡片"激活状态"字段不全可靠（未激活≠没来过）。用飞书到店记录核算，<b>105/132（80%）客户真实到店</b>（数据自 2026-04-12 起，此前到店不计入，故为<b>下限</b>）。"从未到店" 27 人里有 <b>10 人最早购卡在 4-12 前</b>（很可能当时已到店，只是没被记录）；真正"4-12 后购卡且从未到店"约 <b>17 人</b>，才是精准召回名单（见④，4-12 前购卡者已标注）。到店客户列表展示为<b>微信名 + 手机尾号</b>（脱敏）。</div>
@@ -258,8 +260,8 @@ th{background:#f7f9fc;color:#555;font-weight:600}
   <div class="kpis" style="margin-bottom:12px">
     <div class="kpi"><div class="kt">会员总量</div><div class="kv">62</div><div class="ks">distinct 手机号</div></div>
     <div class="kpi"><div class="kt">今日新增</div><div class="kv">0</div><div class="ks">会员卡最早购卡=今日</div></div>
-    <div class="kpi"><div class="kt">在期会员</div><div class="kv">58</div><div class="ks">≥1张可用 · 94%</div></div>
-    <div class="kpi"><div class="kt">失效会员</div><div class="kv">4</div><div class="ks">全部不可用 · 6%</div></div>
+    <div class="kpi"><div class="kt">在期会员</div><div class="kv">57</div><div class="ks">≥1张可用 · 92%</div></div>
+    <div class="kpi"><div class="kt">失效会员</div><div class="kv">5</div><div class="ks">全部不可用 · 8%</div></div>
   </div>
   <div style="display:flex;gap:20px;flex-wrap:wrap">
     <div style="flex:1;min-width:260px"><b>失效原因拆分</b><div style="margin:6px 0">
@@ -271,24 +273,24 @@ th{background:#f7f9fc;color:#555;font-weight:600}
     <div style="display:flex;align-items:center;gap:8px;margin:3px 0">
       <div style="width:90px;font-size:12px;color:#555;text-align:right">② 权益用尽(次数/时长)</div>
       <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:100.0%;background:#c0392b;height:18px"></div></div>
-      <div style="width:48px;font-size:12px;color:#333">4</div>
+      <div style="width:48px;font-size:12px;color:#333">5</div>
     </div></div></div>
     <div style="flex:1;min-width:260px"><b>在期会员结构</b><div style="margin:6px 0">
     <div style="display:flex;align-items:center;gap:8px;margin:3px 0">
       <div style="width:90px;font-size:12px;color:#555;text-align:right">已激活且在期</div>
       <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:100.0%;background:#1e7e34;height:18px"></div></div>
-      <div style="width:48px;font-size:12px;color:#333">49</div>
+      <div style="width:48px;font-size:12px;color:#333">48</div>
     </div>
     <div style="display:flex;align-items:center;gap:8px;margin:3px 0">
       <div style="width:90px;font-size:12px;color:#555;text-align:right">仅未激活卡撑在期</div>
-      <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:18.4%;background:#1e7e34;height:18px"></div></div>
+      <div style="flex:1;background:#eef1f5;border-radius:4px;overflow:hidden"><div style="width:18.8%;background:#1e7e34;height:18px"></div></div>
       <div style="width:48px;font-size:12px;color:#333">9</div>
     </div></div></div>
   </div>
   <div class="warn">📌 双重口径：连续卡/储值卡看「有效期」，小时卡看「剩余可用小时数」，次卡看「可预约次数」。小时卡有效期过期但仍有剩余小时 → 仍算在期（当前边界卡 <b>0</b> 笔，规则已就位防未来误判）。失效两类：① 有效期失效（月/季/储值卡过期）；② 有效未过期但次数/时长用尽。</div>
-  <table><thead><tr><th>昵称</th><th>手机号</th><th>失效主因</th><th>卡明细</th><th>到期时间</th></tr></thead><tbody><tr><td>吴老师</td><td>18235278826</td><td><span class="tag t-bad">权益用尽</span></td><td style="color:#666">双榆树店-双人间20小时(时长用尽)</td><td>2027-05-03（双榆树店-双人间20小时）</td></tr><tr><td>Y</td><td>15031218205</td><td><span class="tag t-bad">权益用尽</span></td><td style="color:#666">50小时卡+赠送 10 小时(时长用尽)</td><td>2027-05-16（50小时卡+赠送 10 小时）</td></tr><tr><td>07Nacissesalleopital_</td><td>13261173969</td><td><span class="tag t-bad">权益用尽</span></td><td style="color:#666">储值卡-500元(已过期(余额耗尽))</td><td>2027-07-28（储值卡-500元）</td></tr><tr><td>Mr.</td><td>13593154709</td><td><span class="tag t-bad">权益用尽</span></td><td style="color:#666">储值卡-1000元(已过期(余额耗尽))</td><td>2027-07-28（储值卡-1000元）</td></tr></tbody></table>
+  <table><thead><tr><th>昵称</th><th>手机号</th><th>失效主因</th><th>卡明细</th><th>到期时间</th></tr></thead><tbody><tr><td>优学 数学张老师</td><td>13269213508</td><td><span class="tag t-bad">权益用尽</span></td><td style="color:#666">双榆树-双人间30小时(时长用尽)</td><td>2027-07-22（双榆树-双人间30小时）</td></tr><tr><td>吴老师</td><td>18235278826</td><td><span class="tag t-bad">权益用尽</span></td><td style="color:#666">双榆树店-双人间20小时(时长用尽)</td><td>2027-05-03（双榆树店-双人间20小时）</td></tr><tr><td>Y</td><td>15031218205</td><td><span class="tag t-bad">权益用尽</span></td><td style="color:#666">50小时卡+赠送 10 小时(时长用尽)</td><td>2027-05-16（50小时卡+赠送 10 小时）</td></tr><tr><td>07Nacissesalleopital_</td><td>13261173969</td><td><span class="tag t-bad">权益用尽</span></td><td style="color:#666">储值卡-500元(已过期(余额耗尽))</td><td>2027-07-30（储值卡-500元）</td></tr><tr><td>Mr.</td><td>13593154709</td><td><span class="tag t-bad">权益用尽</span></td><td style="color:#666">储值卡-1000元(已过期(余额耗尽))</td><td>2027-07-30（储值卡-1000元）</td></tr></tbody></table>
   <div class="warn" style="margin-top:14px">🔔 <b>即将到期提醒名单（1 人）</b>：以下会员卡剩余有效期 ≤ 20%（或绝对 ≤ 6 天）即触发，是续费 / 激活营销的精准目标。剩余占比 = 剩余天数 ÷ 总有效期天数。</div>
-  <table><thead><tr><th>微信名</th><th>手机尾号</th><th>卡类型</th><th>到期时间</th><th>剩余天数</th><th>剩余占比</th></tr></thead><tbody><tr><td>SFA🇫🇷1395×1595</td><td>3511</td><td>座位-工作日月卡</td><td>2026-08-06</td><td>8 天</td><td>15%</td></tr></tbody></table>
+  <table><thead><tr><th>微信名</th><th>手机尾号</th><th>卡类型</th><th>到期时间</th><th>剩余天数</th><th>剩余占比</th></tr></thead><tbody><tr><td>SFA🇫🇷1395×1595</td><td>3511</td><td>座位-工作日月卡</td><td>2026-08-06</td><td>7 天</td><td>13%</td></tr></tbody></table>
   <p style="font-size:13px;color:#b26a00">⚠️ <b>9</b> 名"在期"会员完全靠<b>未激活卡</b>撑着（多为储值/月卡未激活，剩余字段是系统占位而非真实剩余）。建议激活确认后再判定权益：唐天明(13611363032)、开心(18234151992)、刘老师(18519115683)、刘老师 13611365893(13611365893)、魏老师(15901268948)、wang(18500655030)、赵倩(18612577710)、麻了(17801776905)、扇耳大叫驴(18810479298)</p>
 </div>
 
